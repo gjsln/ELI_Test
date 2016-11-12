@@ -1,0 +1,33 @@
+<div class="main-master" id="masterPage">
+	<form>
+	    <div class="form-group">
+	      <div class="input-group">
+	        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+	        <input type="text" class="form-control" placeholder="Search Name" ng-model="searchName">
+	      </div>      
+	    </div>
+	</form>
+  
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <td>Frist Name</td>
+        <td>Last Name</td>
+        <td>Age</td>
+        <td>Gender</td>
+        <td>Address</td>
+        <td>Image</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="stud in collectionData | filter: searchName">
+        <td>{{ stud.fname }}</td>
+        <td>{{ stud.lName }}</td>
+		    <td>{{ stud.age }}</td>
+        <td>{{ stud.gender }}</td>
+        <td>{{ stud.address }}</td>        
+        <td><image src="{{ stud.studImage }}" height="50" width="50"/></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

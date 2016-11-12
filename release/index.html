@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="SMApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Helpdesk</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../style.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="mainPage">
+        <section class="container">
+            <section class="header">
+                <div class="formpage-topsection col-xs-12">
+                    <div class="col-lg-6">
+                        <div class="page-logo">Logo
+                            <img src="" alt="Logo" class="small-image" />
+                        </div>
+                    </div>
+                    <div class="side-top-menu col-lg-6">
+                        <div class="floatRight">
+                            <div class="user-profile paddingLR floatLeft">
+                                <a href="#"><span class="user-icon">&nbsp;</span><span class="userid-txt">Login User Name</span></a>
+                            </div>
+                            <div class="help-btn paddingLR floatLeft">
+                                <a href="#">
+                                    <div class="help-icon">&nbsp;</div>
+                                    <div class="help-txt">Help</div>
+                                </a>
+                            </div>
+                            <div class="logout-btn paddingLR floatLeft">
+                                <a href="#">
+                                    <div class="logout-icon">&nbsp;</div>
+                                    <div class="logout-txt">Logout</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="top-divider clearfix col-xs-12"></div>
+            <section class="main-container">
+                <section class="main-form col-md-12">
+                    <div class="left-side-form col-md-12">
+                        <ui-view></ui-view>
+                        
+                    </div>
+                </section>
+            </section>
+            <section class="footer-section clearfix">
+                <div class="footer-content">
+                    <ul class="footer-menu col-md-6">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </div>
+    <script type="text/javascript" src="../vendor/jquery/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../vendor/angular/angular-1.5.8.min.js"></script>
+    <script type="text/javascript" src="../vendor/angular/angular-ui-router.min.js"></script>    
+    <script type="text/javascript" src="../vendor/angular/angular-animate-1.5.8.min.js"></script>
+    <script type="text/javascript" src="../vendor/angular/angular-resource-1.5.8.min.js"></script>
+    <script type="text/javascript" src="../vendor/angular/angular-sanitize-1.5.8.min.js"></script>
+    <script type="text/javascript" src="../vendor/angular/angular-touch-1.5.8.min.js"></script>
+    <script type="text/javascript" src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../vendor/angular/ui-bootstrap-2.2.0.min.js"></script>
+    <script src="../../script.js"></script>
+</body>
+</html>
