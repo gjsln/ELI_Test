@@ -2,7 +2,7 @@
 
 Install Node JS
 
-Install with Grunt & Karma globally - below command
+Install with Grunt & Karma globally - wwith below command
 
 => npm install -g grunt-cli
 
