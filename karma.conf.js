@@ -15,10 +15,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'vendor/angular/angular-1.5.8.min.js',
-      'vendor/angular/angular-mocks.js',
-      'script.js',
-      'test/*.js'
+      'release/vendor/angular/angular-1.5.8.min.js',
+      'release/vendor/angular/angular-mocks.js',
+      'release/script.js',
+      'release/test/script.spec.js'
     ],
 
     // list of files to exclude

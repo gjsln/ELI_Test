@@ -1,14 +1,13 @@
-'use strict';
-
 describe('Main Controller test suite', function() {
 	describe('Controller: employeeDataCtrl', function() {
-		var $scope, $httpBackend, createController, $http;
+		var $scope, $httpBackend, createController, $http, employeeDataSVC;
 		
-		beforeEach(module('SMApp'));
+		beforeEach(angular.mock.module('SMApp'));
 
-	    beforeEach(inject(function($controller, $rootScope, _$httpBackend_, _$http_) {
+	    beforeEach(inject(function($controller, $rootScope, _$httpBackend_, employeeDataSVC, _$http_) {
 	      $scope = $rootScope.$new();
 	      $httpBackend = _$httpBackend_;
+	      employeeDataSVC = employeeDataSVC;
 	      $http = _$http_;
 
 	      createController = function() {
@@ -23,11 +22,16 @@ describe('Main Controller test suite', function() {
 	      $httpBackend.verifyNoOutstandingRequest();
 	    });
 
-	    it("should GET all the Student Data", function() {
-	      $httpBackend.expectGET('/data/employeeTableData.json').respond(200, [{}, {}, {}]);
-	      createController();
-	      $httpBackend.flush();
-	      expect($scope.collectionData.length).toBe(8);
+	    it("Should GET all the Student Data", function() {
+	    	$httpBackend.expectGET('http://localhost:8001/data/employeeTableData.json').respond(200);
+			var succeeded;
+			employeeDataSVC.retrieveFromData().then(function () {
+				succeeded = true;
+			});  
+			createController();
+			$httpBackend.flush();
+			expect(succeeded).to.be.true;	      
+			expect($scope.collectionData.length).toBe(8);
 	    });
 	});
 });
