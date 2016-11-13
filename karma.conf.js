@@ -15,11 +15,11 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'node_modules/angular-mocks/angular-mocks.js',
-      '*.js',
-      '*.html'    
+      'vendor/angular/angular-1.5.8.min.js',
+      'vendor/angular/angular-mocks.js',
+      'script.js',
+      'test/*.js'
     ],
-
 
     // list of files to exclude
     exclude: [
@@ -30,7 +30,7 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       '*.html': ['ng-html2js'],
-      '**/!(*.mock|*.spec).js': ['coverage']        
+      '!(*.spec).js': ['coverage']        
     },
 
     ngHtml2JsPreprocessor: {

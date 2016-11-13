@@ -4,7 +4,8 @@ angular.module('SMApp',
 	['ui.router',
 	 'ngAnimate',
 	 'ngSanitize',
-	 'ui.bootstrap'])
+	 'ui.bootstrap'
+])
 
 .config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
@@ -23,7 +24,6 @@ angular.module('SMApp',
 
     employeeDataSVC.retrieveFromData().success(function (response) {
       $scope.collectionData = response.empData;
-      console.log(response.empData);
     });
 }])
 

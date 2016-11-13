@@ -34,14 +34,14 @@ module.exports = function(grunt) {
             }
         },
         uglify: {
-            script: {
+            /*script: {
                 options: {
                     sourceMap: 'release/script.min.js.map'
                 },
                 files: {
                     'release/script.min.js': ['release/script.js']
                 }
-            }
+            }*/
         },
         less: {
             production: {
