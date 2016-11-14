@@ -2,13 +2,13 @@ describe('Main Controller test suite', function() {
 	describe('Controller: employeeDataCtrl', function() {
 		var $scope, $httpBackend, createController, $http, employeeDataSVC;
 		
-		beforeEach(angular.mock.module('SMApp'));
+		beforeEach(module('SMApp'));
 
-	    beforeEach(inject(function($controller, $rootScope, _$httpBackend_, employeeDataSVC, _$http_) {
+	    beforeEach(inject(function($controller, $rootScope, $httpBackend, employeeDataSVC, $http) {
 	      $scope = $rootScope.$new();
-	      $httpBackend = _$httpBackend_;
+	      $httpBackend = $httpBackend;
 	      employeeDataSVC = employeeDataSVC;
-	      $http = _$http_;
+	      $http = $http;
 
 	      createController = function() {
 	        return $controller('employeeDataCtrl', {
@@ -23,7 +23,7 @@ describe('Main Controller test suite', function() {
 	    });
 
 	    it("Should GET all the Student Data", function() {
-	    	$httpBackend.expectGET('http://localhost:8001/data/employeeTableData.json').respond(200);
+	    	$httpBackend.expectGET('/data/employeeTableData.json').respond(200);
 			var succeeded;
 			employeeDataSVC.retrieveFromData().then(function () {
 				succeeded = true;
