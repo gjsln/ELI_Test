@@ -26,12 +26,10 @@
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-ng-html2js-preprocessor": "^1.0.0",
-    "lodash": "^3.10.1",
     "typescript": "^1.7.3"
   },
   "dependencies": {
-    "angular-ui-router": "^0.3.1",
-    "lodash": "^3.10.1"
+    "angular-ui-router": "^0.3.1"
   },
   "scripts": {
     "test": "karma start"
